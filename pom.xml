@@ -25,12 +25,33 @@
       <version>5.7.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-params</artifactId>
-      <version>5.7.1</version>
-      <scope>test</scope>
-    </dependency>
+    <!-- cucumber java  -->
+   		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+    		<groupId>io.cucumber</groupId>
+    		<artifactId>cucumber-java</artifactId>
+    		<version>6.9.1</version>
+		</dependency>
+		
+	<!-- cucumber Junit -->
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+		<dependency>
+    		<groupId>info.cukes</groupId>
+    		<artifactId>cucumber-junit</artifactId>
+    		<version>1.2.5</version>
+		    <scope>test</scope>
+		</dependency>
+	
+	<!-- Junit -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>4.13.1</version>
+    		<scope>test</scope>
+		</dependency>
+	
+	
   </dependencies>
 
   <build>
