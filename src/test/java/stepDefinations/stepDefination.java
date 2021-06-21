@@ -16,9 +16,10 @@ public class stepDefination {
         System.out.println("User is on NetBanking landing page");
     }
 
-    @When("^User login into application with username and password$")
-    public void user_login_into_application_with_username_and_password() throws Throwable {
-    	System.out.println("User login into application with username and password");
+    @When("^User login into application with \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void user_login_into_application_with_something_and_something(String strArg1, String strArg2) throws Throwable {
+        System.out.println(strArg1);
+        System.out.println(strArg2);
     }
 
     @Then("^Home page is populated$")
