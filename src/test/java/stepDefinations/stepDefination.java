@@ -27,9 +27,9 @@ public class stepDefination {
     	System.out.println("Home page is populated");
     }
 
-    @And("^Cards are displayed$")
-    public void cards_are_displayed() throws Throwable {
-    	System.out.println("Home page is populated");
+    @And("^Cards displayed are \"([^\"]*)\"$")
+    public void cards_displayed_are_something(String strArg1) throws Throwable {
+        System.out.println(strArg1);
     }
 
 }
