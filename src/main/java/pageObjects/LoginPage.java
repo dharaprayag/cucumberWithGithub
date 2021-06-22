@@ -13,6 +13,7 @@ public class LoginPage
 	By email = By.id("user_email");
 	By password = By.id("user_password");
 	By login = By.xpath("//input[@value='Log In']");
+	By captcha = By.id("checkbox");
 	
 	public LoginPage(WebDriver driver) 
 	{
@@ -35,6 +36,14 @@ public class LoginPage
 	public WebElement getLogin()
 	{
 		return driver.findElement(login);
+	}
+	public int getCaptchaSize()
+	{
+		return driver.findElements(captcha).size();
+	}
+	public WebElement getCaptcha()
+	{
+		return driver.findElement(captcha);
 	}
 		
 }

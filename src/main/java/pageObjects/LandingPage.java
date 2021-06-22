@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +14,8 @@ public class LandingPage
 	By signin = By.cssSelector("a[href*='sign_in']");
 	By title = By.xpath("//div[@class='text-center']/h2");
 	By NavBar = By.cssSelector("ul[class='nav navbar-nav navbar-right'] li a");
+	By popup = By.xpath("//button[text()='NO THANKS']");
+	
 	
 	
 	
@@ -35,5 +39,14 @@ public class LandingPage
 	{
 		return driver.findElement(NavBar);
 	}
+	public int getPopUpSize()
+	{
+		return driver.findElements(popup).size();
+	}
+	public WebElement getPopUp()
+	{
+		return driver.findElement(popup);
+	}
+	
 	
 }

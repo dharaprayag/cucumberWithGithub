@@ -1,14 +1,11 @@
 Feature: Login into Application
 
-Scenario: Positive test validating  login
+Scenario: Positive test validating login
 Given Initialize the browser with chrome
-And Navigate to "QAClickAcademy" Site
+And Navigate to "https://www.rahulshettyacademy.com/#/index" Site
 And Click on Login link in home page to land on secure sigin in page
-When User enters "Username" and "Password" and logs in
+And User enters "dharapatel80085@gmail.com" and "dharapatel80085@" and logs in
 Then Verify that user is successfully logged in
-
-
-
 
 
 

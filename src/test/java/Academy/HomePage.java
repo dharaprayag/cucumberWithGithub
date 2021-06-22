@@ -29,9 +29,9 @@ public class HomePage extends Base
 		driver = initilizeDriver();
 		driver.get(siteUrl);
 		LandingPage l = new LandingPage(driver);
-		//LoginPage lp = new LoginPage(driver); 
-		LoginPage lp = PageFactory.initElements(driver, LoginPage.class);
+		//LoginPage lp = new LoginPage(driver);
 		l.getLogin().click();
+		LoginPage lp = PageFactory.initElements(driver, LoginPage.class);
 		lp.getEmail().sendKeys(username);
 		lp.getPassword().sendKeys(password);
 		
