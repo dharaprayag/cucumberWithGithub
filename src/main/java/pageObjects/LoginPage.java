@@ -14,6 +14,7 @@ public class LoginPage
 	By password = By.id("user_password");
 	By login = By.xpath("//input[@value='Log In']");
 	By captcha = By.id("checkbox");
+	By alertMsg = By.xpath("//*[@class='alert alert-danger']");
 	
 	public LoginPage(WebDriver driver) 
 	{
@@ -44,6 +45,10 @@ public class LoginPage
 	public WebElement getCaptcha()
 	{
 		return driver.findElement(captcha);
+	}
+	public WebElement getAlertMsg()
+	{
+		return driver.findElement(alertMsg);
 	}
 		
 }

@@ -1,11 +1,18 @@
 Feature: Login into Application
 
-Scenario: Positive test validating login
+Scenario Outline: Positive test validating login
 Given Initialize the browser with chrome
 And Navigate to "https://www.rahulshettyacademy.com/#/index" Site
 And Click on Login link in home page to land on secure sigin in page
-And User enters "dharapatel80085@gmail.com" and "dharapatel80085@" and logs in
+And User enters <username> and <password> and logs in
 Then Verify that user is successfully logged in
+Then Close the Browsers
+
+Examples:
+|username					|password			|
+|dharapatel80085@gmail.com	|dharapatel80085	|
+#correct Password is dharapatel80085@
+|test99@gmail.com			|123456				|
 
 
 
