@@ -7,29 +7,38 @@ import cucumber.api.java.en.And;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
+import Resources.Base;
+
 @RunWith(Cucumber.class)
-public class stepDefination {
+public class stepDefination extends Base {
 
-    @Given("^User is on NetBanking landing page$")
-    public void user_is_on_netbanking_landing_page() throws Throwable 
-    {
-        System.out.println("User is on NetBanking landing page");
+	@Given("^Initialize the browser with chrome$")
+    public void initialize_the_browser_with_chrome() throws Throwable {
+		
+		driver = initilizeDriver();
+        
+    }
+	@And("^Navigate to \"([^\"]*)\" Site$")
+	public void navigate_to_something_site(String strArg1) throws Throwable {
+	   	driver.get(strArg1);
+	        
+	}
+
+	@And("^Click on Login link in home page to land on secure sigin in page$")
+	public void click_on_login_link_in_home_page_to_land_on_secure_sigin_in_page() throws Throwable {
+	       
+	}
+
+    @When("^User enters \"([^\"]*)\" and \"([^\"]*)\" and logs in$")
+    public void user_enters_something_and_something_and_logs_in(String strArg1, String strArg2) throws Throwable {
+        
     }
 
-    @When("^User login into application with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void user_login_into_application_with_something_and_something(String strArg1, String strArg2) throws Throwable {
-        System.out.println(strArg1);
-        System.out.println(strArg2);
+    @Then("^Verify that user is successfully logged in$")
+    public void verify_that_user_is_successfully_logged_in() throws Throwable {
+        
     }
 
-    @Then("^Home page is populated$")
-    public void home_page_is_populated() throws Throwable {
-    	System.out.println("Home page is populated");
-    }
-
-    @And("^Cards displayed are \"([^\"]*)\"$")
-    public void cards_displayed_are_something(String strArg1) throws Throwable {
-        System.out.println(strArg1);
-    }
+   
 
 }
