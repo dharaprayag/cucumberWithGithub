@@ -5,7 +5,7 @@ Given Initialize the browser with chrome
 And Navigate to "https://www.rahulshettyacademy.com/#/index" Site
 And Click on Login link in home page to land on secure sigin in page
 And User enters <username> and <password> and logs in
-Then Verify that user is successfully logged in
+#Then Verify that user is successfully logged in
 Then Close the Browsers
 
 Examples:

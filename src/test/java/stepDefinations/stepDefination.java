@@ -47,17 +47,19 @@ public class stepDefination extends Base {
 		LoginPage lp = PageFactory.initElements(driver, LoginPage.class);
 		lp.getEmail().sendKeys(username);
 		lp.getPassword().sendKeys(password);
-		lp.getLogin().click();
-		Thread.sleep(3000);
-		System.out.println(lp.getAlertMsg().getText());
+		System.out.println(lp.getEmail().getText());
+		System.out.println(lp.getPassword().getText());
+		//lp.getLogin().click();
+		//Thread.sleep(3000);
+		//System.out.println(lp.getAlertMsg().getText());
 		/// TEST EXECUTION HAS TO BE FAILED DUE TO CAPTCHA
     }
-    @Then("^Verify that user is successfully logged in$")
+	/*@Then("^Verify that user is successfully logged in$")
     public void verify_that_user_is_successfully_logged_in() throws Throwable
     {
     	/*portalHomePage p = new portalHomePage(driver);
-    	Assert.assertTrue(p.getSearchBox().isDisplayed());*/       
-    }
+    	Assert.assertTrue(p.getSearchBox().isDisplayed());    
+    }*/
     @Then("^Close the Browsers$")
     public void Close_the_Browsers() throws Throwable
     {
