@@ -47,8 +47,10 @@ public class stepDefination extends Base {
 		LoginPage lp = PageFactory.initElements(driver, LoginPage.class);
 		lp.getEmail().sendKeys(username);
 		lp.getPassword().sendKeys(password);
-		System.out.println(lp.getEmail().getText());
-		System.out.println(lp.getPassword().getText());
+		System.out.println("Applicant Username is " + username + " and Password is " + password + "  ");
+		
+		//System.out.println(lp.getEmail().getText());
+		//System.out.println(lp.getPassword().getText());
 		//lp.getLogin().click();
 		//Thread.sleep(3000);
 		//System.out.println(lp.getAlertMsg().getText());
